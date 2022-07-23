@@ -1,0 +1,145 @@
+
+:root {
+    --main-background: hsl(233, 47%, 7%);
+    --color-card: hsl(244, 38%, 16%);
+    --acent-color: hsl(277, 64%, 61%);
+    --image-color: hsl(277, 100%, 58%);
+    --white-color: hsl(0, 0%, 100%);
+    --white-paragraph: hsla(0, 0%, 100%, 0.75);
+    --white-stat: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--main-background);
+}
+.panel {
+    background-color: var(--color-card);
+    display: flex;
+    flex-direction:row-reverse;
+    width: 120vh;
+    margin: 0 auto;  
+    margin-top: 25vh;
+    border-radius: 8px;
+}
+.panel img {
+    border-radius: 8px;
+}
+
+.panel-info {
+    margin: 80px 120px 0px 70px;
+}
+
+.accent-word {
+    color: var(--acent-color)
+}
+
+.panel h1{
+    color: var(--white-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.panel p {
+    color: var(--white-paragraph);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.ratings {
+    color: var(--white-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+    margin: 50px 0px 70px 0px;
+}
+
+.ratings p {
+    opacity: 50%;
+    font-size: 14px;
+    padding-top: 5px
+}
+
+.panel-img {
+    filter: opacity(0.3) drop-shadow(0 0 0 var(--image-color));
+}
+
+
+.attribution { 
+    color: white;
+}
+
+@media only screen and (max-width: 1300px) {
+    .panel {
+        width: 100vh;
+    }
+
+    .panel-info {
+        margin: 0 auto;
+    }
+    
+    .panel h1 {
+        font-size: 30px;
+        text-align: center;
+        margin: 45px 10px 25px 10px
+    }
+
+    .panel p {
+        text-align: center;
+        margin: 0px 10px 0px 10px;
+    }
+
+    .ratings {
+        text-align: center;
+        margin: 15px 40px 0px 40px;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .panel {
+        display: flex;
+        flex-direction: column;
+        width: 50vh;  
+        margin-bottom: 100px; 
+    }
+    .panel-info {
+        margin: 0;
+    }
+
+    .panel h1 {
+        font-size: 38px;
+        margin: 60px 50px 25px 50px;
+    }
+    .panel p {
+        margin: 0px 50px 0px 50px;
+    }
+    .ratings {
+        flex-direction: column;
+        margin-top: 45px;
+        padding: 0;
+    }
+    .companies-rating, .templates-rating, .quries-rating {
+        margin-bottom: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 550px){
+    .panel {
+        width: 40vh; 
+        margin-bottom: 100px; 
+    }
+
+    .panel h1 {
+        margin: 25px 10px 25px 10px;
+    }
+}
